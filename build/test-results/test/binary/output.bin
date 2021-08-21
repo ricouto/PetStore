@@ -1,17 +1,5 @@
-Request method:	GET
-=Request URI:	https://petstore.swagger.io/v2/store/inventory
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-2				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
 HTTP/1.1 200 OK
-%Date: Sat, 21 Aug 2021 13:32:41 GMT
+%Date: Sat, 21 Aug 2021 16:31:21 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -21,14 +9,7 @@
  Server: Jetty(9.2.9.v20150224)
 
 {
-    "sold": 2,
-    "1": 1,
-    "SOLD": 1,
-    "string": 232,
-    "unavailable": 1,
-    "{{status}}": 2,
-    "pending": 2,
-    "available": 743,
-    "free": 1,
-    "ok": 2
+    "code": 200,
+    "type": "unknown",
+    "message": "2005159160"
 }

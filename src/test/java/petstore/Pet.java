@@ -12,6 +12,7 @@ import static org.hamcrest.Matchers.*;
 
 public class Pet {
     String petId;
+    String pathPetStatus = "findByStatus?status=";
     String uri = "https://petstore.swagger.io/v2/pet";
 
     public String lerJson(String caminhoJson) throws IOException {
@@ -86,7 +87,7 @@ public class Pet {
 
         given()
                 .contentType("application/json")
-                .log().all()
+                //.log().all()
         .when()
                 .delete(uri +"/"+ petId)
         .then()
@@ -95,5 +96,28 @@ public class Pet {
                 .body("type", is("unknown"))
                 .body("message", is(petId))
         ;//teste
+    }
+
+    @Test(priority = 5)
+    public void consultarPetPorStatus(){
+
+        String tipoStatus = "available";
+
+        given()
+                .contentType("application/json")
+                //.log().all()
+        .when()
+                .get(uri + "/" + pathPetStatus + tipoStatus)
+        .then()
+                .log().all()
+                .statusCode(200)
+                //.body("id", equalTo(petId02))
+                //.body("name", containsInAnyOrder("fish"))
+
+
+                .body("name[]", everyItem(equalTo("camilinha")))
+
+        ;
+
     }
 }
