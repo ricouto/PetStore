@@ -22,7 +22,7 @@ public class Data {
         CSVReaderBuilder builder = new CSVReaderBuilder(new FileReader(caminhoCSV));
         CSVReader reader = builder.withSkipLines(0).build();
 
-        List<String[]> users = reader.readAll();
-        return users;
+        //List<String[]> users = reader.readAll();
+        return reader.readAll();
     }
 }
