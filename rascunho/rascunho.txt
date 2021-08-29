@@ -1,0 +1,16 @@
+//CSVReader reader = new CSVReader((Reader) data.lerCSV("db/users.csv"));
+//Iterator<String[]> iterator = data.lerCSV("db/users.csv").iterator();
+
+
+List<String[]> allData = data.lerCSV("db/user.csv");
+
+        for (String[] row : allData) {
+            for (String cell : row) {
+                //cell.split(",");
+                testCases.add(cell.split(","));
+                System.out.println(cell.split(",") + "\t");
+            }
+        }
+
+ //Reader reader = Files.newBufferedReader(Paths.get(caminhoCSV));
+        //CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(0).build();

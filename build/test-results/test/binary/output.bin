@@ -1,5 +1,5 @@
 HTTP/1.1 200 OK
-%Date: Sat, 21 Aug 2021 16:31:21 GMT
+%Date: Sun, 29 Aug 2021 11:05:01 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -13,3 +13,22 @@
     "type": "unknown",
     "message": "2005159160"
 }
+
+O id do user eh : 2005159160
+HTTP/1.1 200 OK
+%Date: Sun, 29 Aug 2021 11:05:03 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "2005159161"
+}
+
+O id do user eh : 2005159161

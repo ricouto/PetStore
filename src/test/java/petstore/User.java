@@ -1,6 +1,8 @@
 package petstore;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import utils.Data;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,17 +14,24 @@ import static org.hamcrest.Matchers.*;
 
 public class User {
 
+    Data data;
+
     String postUser = "user";
     String uri = "https://petstore.swagger.io/v2";
 
-    public String lerJson(String caminhoJson) throws IOException {
+    /*public String lerJson(String caminhoJson) throws IOException {
         return new String(Files.readAllBytes(Paths.get(caminhoJson)));
+    }*/
+
+    @BeforeMethod
+    public void setUp(){
+        data = new Data();
     }
 
     @Test(priority = 1)
     public void incluirUsuario() throws IOException {
 
-        String jsonBody = lerJson("db/user1.json");
+        String jsonBody = data.lerJson("db/user1.json");
 
         String messageUser = given()
                 .contentType("application/json")
